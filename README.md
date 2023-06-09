@@ -1,49 +1,30 @@
 # Todo App
 
-This is a simple Todo application built using React. It allows users to create, edit, and delete tasks, as well as mark tasks as completed.
+This is a simple Todo application built with React. It allows you to manage your daily tasks and keep track of them.
 
 ## Features
 
-- Add new tasks to the todo list.
-- Edit existing tasks.
-- Delete tasks from the todo list.
-- Mark tasks as completed.
-- Persistent storage using local storage.
+- Fetches and displays todo items from the [JSON Placeholder API](https://jsonplaceholder.typicode.com/todos)
+- Adds a new todo item by making a POST call to the API (dummy request, no actual server-side addition)
+- Updates a todo item by making a PUT call to the API (dummy request, no actual server-side update)
+- Deletes a todo item by making a DELETE call to the API (dummy request, no actual server-side deletion)
 
-## Installation
+## How to Use
 
-1. Clone the repository: git clone [https://github.com/your-username/todo-app.git](https://github.com/hydratronic/React-ToDo-App.git)
-2. Navigate to the project directory: cd todo-app
-3. Install the dependencies: npm install
-4. Start the application:npm start
-5. Open your web browser and visit http://localhost:3000 to access the Todo App.
-
-
-## Usage
-
-1. To add a new task, enter the task description in the input field and click the "Add Task" button.
-2. To edit a task, click the pen icon next to the task and modify the task description in the edit form.
-3. To delete a task, click the trash icon next to the task.
-4. To mark a task as completed, click the task text.
-
+1. Clone the repository to your local machine.
+2. Install the dependencies by running `npm install` in the project directory.
+3. Start the development server by running `npm start`.
+4. Open your web browser and navigate to `http://localhost:3000` to view the Todo App.
 
 ## Technologies Used
 
-React
-JavaScript
-HTML
-CSS
+- React
+- JavaScript
+- HTML
+- CSS
 
+## Credits
 
-## Contributing
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+- The Todo App uses the [JSON Placeholder API](https://jsonplaceholder.typicode.com/todos) to fetch and interact with todo items.
 
-## License
-This project is licensed under the MIT License.
-
-## Acknowledgments
-The Todo App was developed as a learning project inspired by various React tutorials and examples.
-  
-  
-   
-   
+Feel free to explore and enhance the functionality of the Todo App!
