@@ -8,7 +8,6 @@ export const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
 
   // Function to fetch todos from the API
-  // Function to fetch todos from the API
   const fetchTodos = async () => {
     try {
       const response = await fetch("https://jsonplaceholder.typicode.com/todos");
@@ -31,24 +30,33 @@ export const TodoWrapper = () => {
   }, []);
 
   // Function to add a new todo
-  const addTodo = async (todo) => {
-    try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: todo,
-          completed: false,
-        }),
-      });
-      const data = await response.json();
-      setTodos([...todos, data]);
-    } catch (error) {
-      console.error("Error adding todo:", error);
-    }
-  };
+const addTodo = async (todo) => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: todo,
+        completed: false,
+      }),
+    });
+    const data = await response.json();
+    
+    const newTodo = {
+      id: data.id,
+      task: data.title,
+      completed: data.completed,
+      isEditing: false,
+    };
+
+    setTodos((prevTodos) => [newTodo, ...prevTodos]);
+  } catch (error) {
+    console.error("Error adding todo:", error);
+  }
+};
+
 
   // Function to delete a todo
   const deleteTodo = async (id) => {
